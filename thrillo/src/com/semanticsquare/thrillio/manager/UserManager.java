@@ -13,7 +13,7 @@ public class UserManager {
 		return instance;
 	}
 
-	public User createUser(String email, String password, String firstName, String lastName, String userType, long id,
+	public User createUser(long id, String email, String password, String firstName, String lastName, String userType, 
 			int gender) {
 		User user = new User(); 
 		user.setEmail(email);
