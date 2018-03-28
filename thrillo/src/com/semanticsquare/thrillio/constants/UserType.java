@@ -1,7 +1,7 @@
 package com.semanticsquare.thrillio.constants;
 
 public class UserType {
-private userType () {}; 
+private UserType () {}; 
 
 public static final String USER = "user";
 public static final String EDITOR = "editor";
