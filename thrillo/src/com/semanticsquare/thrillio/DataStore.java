@@ -23,7 +23,9 @@ import com.semanticsquare.thrillio.manager.UserManager;
 	 
 	 public static void loadData () {
 		 loadUsers();
-		 loadWebLinks(); 
+		 loadWebLinks();
+		 loadBooks();
+		 loadMovies();
 	 }
 	 
 	 private static void loadUsers() { 
@@ -44,6 +46,14 @@ bookmark[0][1] = BookmarkManager.getInstance().createWeblink("http://tomcat.apac
 
 
 	 }
+	 
+   private static void loadBook() {
+		 bookmark[1][0]= BookmarkManager.getInstance().createBook(publicationYear, publiser, author, id, title, genre, amazonRating)
+	 }
+   
+   private static void loadMovies() {
+	   bookmark[2][0] = BookmarkManager.getInstance().createMovie(id, title, profileURL, releaseYear, name, director, cast, imdbRating)
+   }
 	 
 	 
 	}
