@@ -1,7 +1,15 @@
 package com.semanticsquare.thrillio.entities;
 
+import java.util.Arrays;
+
 public class Movie extends Bookmark {
 
+	@Override
+	public String toString() {
+		return "Movie [releaseYear=" + releaseYear + ", genre=" + genre + ", title=" + title + ", profileUrl="
+				+ profileUrl + ", director=" + Arrays.toString(director) + ", cast=" + Arrays.toString(cast)
+				+ ", imdbRating=" + imdbRating + "]";
+	}
 	private int releaseYear;
 	private String genre;
 	private String title;

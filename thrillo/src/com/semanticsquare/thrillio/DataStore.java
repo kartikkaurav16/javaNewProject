@@ -19,8 +19,16 @@ import com.semanticsquare.thrillio.manager.UserManager;
 		
 		
 	 private static User[] users  = new User[TOTAL_USER_COUNT] ; 
-	 private static Bookmark[][] bookmark   = new Bookmark[BOOKMARK_TYPES][BOOKMARK_COUNT_PERTYPE] ; 
-	 private static UserBookmark[] userBookmark = new UserBookmark[TOTAL_USER_COUNT * USER_BOOKMARK_LIMIT] ;
+	 public static User[] getUsers() {
+		return users;
+	}
+
+	private static Bookmark[][] bookmark   = new Bookmark[BOOKMARK_TYPES][BOOKMARK_COUNT_PERTYPE] ; 
+	 public static Bookmark[][] getBookmark() {
+		return bookmark;
+	}
+
+	private static UserBookmark[] userBookmark = new UserBookmark[TOTAL_USER_COUNT * USER_BOOKMARK_LIMIT] ;
 	   
 	 
 	 public static void loadData () {

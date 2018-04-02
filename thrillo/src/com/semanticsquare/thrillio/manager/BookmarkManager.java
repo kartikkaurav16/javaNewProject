@@ -1,11 +1,16 @@
 package com.semanticsquare.thrillio.manager;
 
+import com.semanticsquare.thrillio.dao.BookmarkDao;
 import com.semanticsquare.thrillio.entities.Book;
+import com.semanticsquare.thrillio.entities.Bookmark;
 import com.semanticsquare.thrillio.entities.Movie;
 import com.semanticsquare.thrillio.entities.Weblink;
 
 public class BookmarkManager {
 private static BookmarkManager instance = new BookmarkManager();
+
+private static BookmarkDao dao = new BookmarkDao();
+
 	private BookmarkManager() {};
 	public static BookmarkManager getInstance() {
 		return instance;
@@ -53,7 +58,11 @@ private static BookmarkManager instance = new BookmarkManager();
 		weblink.setUrl(url);
 		
 		return weblink; 
-		}
+		};
+		
+	public Bookmark[][] getBookmark(){
+		return dao.getBookmark();
+	}
 	
 	
      

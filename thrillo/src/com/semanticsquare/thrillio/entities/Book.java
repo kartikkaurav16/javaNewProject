@@ -1,7 +1,14 @@
 package com.semanticsquare.thrillio.entities;
 
+import java.util.Arrays;
+
 public class Book extends Bookmark {
 
+	@Override
+	public String toString() {
+		return "Book [publicationYear=" + publicationYear + ", publiser=" + publiser + ", author="
+				+ Arrays.toString(author) + ", genre=" + genre + ", amazonRating=" + amazonRating + "]";
+	}
 	private int publicationYear; 
 	private String publiser; 
 	private String[] author; 

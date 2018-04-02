@@ -1,6 +1,11 @@
 package com.semanticsquare.thrillio.entities;
 
 public class User {
+@Override
+	public String toString() {
+		return "User [email=" + email + ", password=" + password + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", userType=" + userType + ", id=" + id + ", gender=" + gender + "]";
+	}
 private String email; 
 private String password;
 private String firstName;
