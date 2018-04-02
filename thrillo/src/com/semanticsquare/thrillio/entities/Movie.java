@@ -2,22 +2,32 @@ package com.semanticsquare.thrillio.entities;
 
 public class Movie extends Bookmark {
 
-	private int releaseYear; 
-	private String Name;
+	private int releaseYear;
+	private String genre;
+	private String title;
+	private String profileUrl; 
 	private String[] director; 
 	private String[] cast; 
 	private double imdbRating;
+	public String getGenre() {
+		return genre;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
 	public int getReleaseYear() {
 		return releaseYear;
 	}
 	public void setReleaseYear(int releaseYear) {
 		this.releaseYear = releaseYear;
-	}
-	public String getName() {
-		return Name;
-	}
-	public void setName(String name) {
-		Name = name;
 	}
 	public String[] getDirector() {
 		return director;
@@ -36,6 +46,12 @@ public class Movie extends Bookmark {
 	}
 	public void setImdbRating(double imdbRating) {
 		this.imdbRating = imdbRating;
+	}
+	public String getProfileUrl() {
+		return profileUrl;
+	}
+	public void setProfileUrl(String profileUrl) {
+		this.profileUrl = profileUrl;
 	} 
 	
 	

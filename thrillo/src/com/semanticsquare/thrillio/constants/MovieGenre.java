@@ -11,5 +11,6 @@ public class MovieGenre {
 	public static final String THRILLER = "THRILLER";
 	public static final String SPORTS = "SPORTS";
 	public static final String RELIGIOUS = "RELIGIOUS";
+	public static final String CLASSICS = "CLASSICS";
 
 }

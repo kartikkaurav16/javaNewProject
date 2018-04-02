@@ -11,19 +11,18 @@ private static BookmarkManager instance = new BookmarkManager();
 		return instance;
 	}
 	
-	public Movie createMovie(long id,String title,String profileURL, 
- int releaseYear, String name ,String[] director, String[] cast,double imdbRating) {
+	public Movie createMovie(long id,String title,String genre, 
+ int releaseYear ,String[] director, String[] cast,double imdbRating, String profileUrl) {
 	
 		Movie movie = new Movie();
 		movie.setCast(cast);
 		movie.setDirector(director);
 		movie.setId(id);
 	movie.setImdbRating(imdbRating);
-	movie.setName(name);	
-	movie.setProfileURL(profileURL);
+	movie.setTitle(title);	
+	movie.setGenre(genre);
 	movie.setReleaseYear(releaseYear);
-	movie.setTitle(title);
-
+	movie.setProfileURL(profileUrl);
 		return movie; 
 		
 	}	

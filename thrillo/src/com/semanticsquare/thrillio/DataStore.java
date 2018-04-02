@@ -2,6 +2,7 @@ package com.semanticsquare.thrillio;
 
 		
 	import com.semanticsquare.thrillio.constants.Gender;
+import com.semanticsquare.thrillio.constants.MovieGenre;
 import com.semanticsquare.thrillio.constants.UserType;
 import com.semanticsquare.thrillio.entities.Bookmark;
 	import com.semanticsquare.thrillio.entities.User;
@@ -48,11 +49,21 @@ bookmark[0][1] = BookmarkManager.getInstance().createWeblink("http://tomcat.apac
 	 }
 	 
    private static void loadBook() {
-		 bookmark[1][0]= BookmarkManager.getInstance().createBook(publicationYear, publiser, author, id, title, genre, amazonRating)
+		 bookmark[1][0]= BookmarkManager.getInstance().createBook(1854, publiser, author, id, title, genre, amazonRating)
+				 4000	Walden	1854	Wilder Publications	Henry David Thoreau	Philosophy	4.3
 	 }
    
    private static void loadMovies() {
-	   bookmark[2][0] = BookmarkManager.getInstance().createMovie(id, title, profileURL, releaseYear, name, director, cast, imdbRating)
+bookmark[2][0] = BookmarkManager.getInstance().createMovie(3000, "Citizen Kane",MovieGenre.CLASSICS, 1941 ,new String[] {"Orson", "Welles"}, new String[] {"Orson Welles","Joseph Cotten"}, 8.5,"");
+bookmark[2][1] = BookmarkManager.getInstance().createMovie(3001, "The Grapes of Wrath",MovieGenre.CLASSICS, 1940 ,new String[] {"Henry Fonda", "Jane Darwell"}, new String[] {"John Ford"}, 8.2,"");
+bookmark[2][2] = BookmarkManager.getInstance().createMovie(3002, "A Touch of Greatness",MovieGenre.ROMANCE, 2004 ,new String[] {"Albert Cullum"}, new String[] {"Leslie Sullivan"}, 7.3,"");
+bookmark[2][3] = BookmarkManager.getInstance().createMovie(3003, "The Big Bang Theory",MovieGenre.DRAMA, 2007 ,new String[] {"Kaley Cuoco", "Kaley Cuoco"}, new String[] {"Kaley Cuoco","Bill Prady"}, 8.7,"");
+bookmark[2][4] = BookmarkManager.getInstance().createMovie(3000, "Citizen Kane",MovieGenre.CLASSICS, 1941 ,new String[] {"Orson", "Welles"}, new String[] {"Orson Welles","Joseph Cotten"}, 8.5,"");
+			   
+long id,String title,String genre,int releaseYear ,String[] director, String[] cast,double imdbRating
+
+3003	The Big Bang Theory	2007	Kaley Cuoco,Jim Parsons	Chuck Lorre,Bill Prady	TV Shows	8.7	unknown
+
    }
 	 
 	 
