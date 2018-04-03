@@ -12,10 +12,10 @@ import com.semanticsquare.thrillio.manager.BookmarkManager;
 import com.semanticsquare.thrillio.manager.UserManager;
 
 	public class DataStore {
-		private static final int USER_BOOKMARK_LIMIT = 5; 
-		private static final int BOOKMARK_COUNT_PERTYPE = 5; 
-		private static final int BOOKMARK_TYPES= 3;
-		private static final int TOTAL_USER_COUNT = 5; 
+		public static final int USER_BOOKMARK_LIMIT = 5; 
+		public static final int BOOKMARK_COUNT_PERTYPE = 5; 
+		public static final int BOOKMARK_TYPES= 3;
+		public static final int TOTAL_USER_COUNT = 5; 
 		
 		
 	 private static User[] users  = new User[TOTAL_USER_COUNT] ; 
