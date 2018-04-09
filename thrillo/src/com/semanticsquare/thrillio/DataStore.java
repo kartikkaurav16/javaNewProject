@@ -28,9 +28,9 @@ import com.semanticsquare.thrillio.manager.UserManager;
 		return bookmark;
 	}
 
-	private static UserBookmark[] userBookmark = new UserBookmark[TOTAL_USER_COUNT * USER_BOOKMARK_LIMIT] ;
-	   
-	 
+	private static UserBookmark[] userBookmarks = new UserBookmark[TOTAL_USER_COUNT * USER_BOOKMARK_LIMIT] ;
+	private static int bookmarkIndex = 0;    
+
 	 public static void loadData () {
 		 loadUsers();
 		 loadWebLinks();
@@ -74,6 +74,16 @@ bookmark[2][3] = BookmarkManager.getInstance().createMovie(3003, "The Big Bang T
 bookmark[2][4] = BookmarkManager.getInstance().createMovie(3004, "dil chatha hai ",MovieGenre.CLASSICS, 2000 ,new String[] {"Fearhan Akthar", "Zoya"}, new String[] {"Amir","saif","Aksahy Khanna", "prity Zinta"}, 8.5,"");
 
    }
+
+public static void add(UserBookmark userBookmark) {
+	userBookmarks [bookmarkIndex] = userBookmark;
+	System.out.println("Data Store - > " + userBookmarks);
+	bookmarkIndex++;
+}
+
+
+
+
 	 
 	 
 	}
