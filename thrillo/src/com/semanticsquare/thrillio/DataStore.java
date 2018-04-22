@@ -67,17 +67,17 @@ bookmark[1][4]= BookmarkManager.getInstance().createBook(2007, "Prentice Hall", 
 	 }
    
    private static void loadMovies() {
-bookmark[2][0] = BookmarkManager.getInstance().createMovie(3000, "Citizen Kane",MovieGenre.CLASSICS, 1941 ,new String[] {"Orson", "Welles"}, new String[] {"Orson Welles","Joseph Cotten"}, 8.5,"");
-bookmark[2][1] = BookmarkManager.getInstance().createMovie(3001, "The Grapes of Wrath",MovieGenre.CLASSICS, 1940 ,new String[] {"Henry Fonda", "Jane Darwell"}, new String[] {"John Ford"}, 8.2,"");
-bookmark[2][2] = BookmarkManager.getInstance().createMovie(3002, "A Touch of Greatness",MovieGenre.ROMANCE, 2004 ,new String[] {"Albert Cullum"}, new String[] {"Leslie Sullivan"}, 7.3,"");
-bookmark[2][3] = BookmarkManager.getInstance().createMovie(3003, "The Big Bang Theory",MovieGenre.DRAMA, 2007 ,new String[] {"Kaley Cuoco", "Kaley Cuoco"}, new String[] {"Kaley Cuoco","Bill Prady"}, 8.7,"");
-bookmark[2][4] = BookmarkManager.getInstance().createMovie(3004, "dil chatha hai ",MovieGenre.CLASSICS, 2000 ,new String[] {"Fearhan Akthar", "Zoya"}, new String[] {"Amir","saif","Aksahy Khanna", "prity Zinta"}, 8.5,"");
+bookmark[2][0] = BookmarkManager.getInstance().createMovie(3000, "Citizen Kane",MovieGenre.CLASSICS, 1941 ,new String[] {"Orson", "Welles"}, new String[] {"Orson Welles","Joseph Cotten"}, 8.5,"http://www.javaworld.com/Joseph Cotten/core-java/taming-tiger--part-2.html");
+bookmark[2][1] = BookmarkManager.getInstance().createMovie(3001, "The Grapes of Wrath",MovieGenre.CLASSICS, 1940 ,new String[] {"Henry Fonda", "Jane Darwell"}, new String[] {"John Ford"}, 8.2,"http://www.javaworld.com/Jane Darwell/core-java/taming-tiger--part-2.html");
+bookmark[2][2] = BookmarkManager.getInstance().createMovie(3002, "A Touch of Greatness",MovieGenre.ROMANCE, 2004 ,new String[] {"Albert Cullum"}, new String[] {"Leslie Sullivan"}, 7.3,"http://www.javaworld.com/article/2072759/core-java/taming-tiger--part-2.html");
+bookmark[2][3] = BookmarkManager.getInstance().createMovie(3003, "The Big Bang Theory",MovieGenre.DRAMA, 2007 ,new String[] {"Kaley Cuoco", "Kaley Cuoco"}, new String[] {"Kaley Cuoco","Bill Prady"}, 8.7,"http://www.javaworld.com/Kaley Cuoco/core-java/taming-tiger--part-2.html");
+bookmark[2][4] = BookmarkManager.getInstance().createMovie(3004, "dil chatha hai ",MovieGenre.CLASSICS, 2000 ,new String[] {"Fearhan Akthar", "Zoya"}, new String[] {"Amir","saif","Aksahy Khanna", "prity Zinta"}, 8.5,"http://www.javaworld.com/Aksahy Khanna/core-java/taming-tiger--part-2.html");
 
    }
 
 public static void add(UserBookmark userBookmark) {
 	userBookmarks [bookmarkIndex] = userBookmark;
-	System.out.println("Data Store - > " + userBookmarks);
+	//System.out.println("Data Store - > " + userBookmarks);
 	bookmarkIndex++;
 }
 

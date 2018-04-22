@@ -45,5 +45,11 @@ public class Book extends Bookmark {
 	public void setAmazonRating(double amazonRating) {
 		this.amazonRating = amazonRating;
 	}
+	public boolean isKidFriendly() {
+		if (genre.contains("PHILOSOPHY") || getTitle().contains("porn")){
+			return false; 
+		}
+		return true;
+	}
 	
 }

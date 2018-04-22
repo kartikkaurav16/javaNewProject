@@ -26,8 +26,6 @@ public class Movie extends Bookmark {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
-	
 	public void setGenre(String genre) {
 		this.genre = genre;
 	}
@@ -62,6 +60,15 @@ public class Movie extends Bookmark {
 		this.profileUrl = profileUrl;
 	} 
 	
+	public boolean isKidFriendly() {
+		// TODO Auto-generated method stub
+		if (getProfileURL().contains("porn") || getTitle().contains("porn"))
+			{
+			return false; 
+		}
+		return true;
+	}
+
 	
 	
 	
