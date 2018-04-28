@@ -11,31 +11,29 @@ public class View {
 
 	public static void browse(User user, Bookmark[][] bookmark) {
 		System.out.println("\n + " + user.getEmail() + "isBrowsing");
-
 		int bookmarkCount = 0;
-
 		for (Bookmark[] bookmarkList : bookmark) {
 			for (Bookmark bookmarks : bookmarkList) {
 				// bookmarking
 				if (bookmarkCount < DataStore.USER_BOOKMARK_LIMIT) {
 					boolean isBookmarked = getBookmarkDecision(bookmarks);
-
-					if (isBookmarked)
+					if (isBookmarked) {
 						bookmarkCount++;
-					BookmarkController.getInstance().saveUserBookmark(user, bookmarks);
-					System.out.println("new Item is bookamerked bookmark in view" + bookmarks);
-
+						BookmarkController.getInstance().saveUserBookmark(user, bookmarks);
+						System.out.println("new Item is bookamerked bookmark in view" + bookmarks);
+					}
 				}
 				if (user.getUserType().equals(UserType.EDITOR) || user.getUserType().equals(UserType.CHIEF_EDITOR)) {
 					if (bookmarks.isKidFriendly()
 							&& bookmarks.getIsKidfriendlyStatus().equals(KidFriendlyStatus.UNKNOWN)) {
 						String kidFriendlyStatus = getKidFriendlyStatusDecision(bookmarks);
-						if(!kidFriendlyStatus.equals(KidFriendlyStatus.UNKNOWN)){
+						if (!kidFriendlyStatus.equals(KidFriendlyStatus.UNKNOWN)) {
 							bookmarks.setIsKidfriendlyStatus(kidFriendlyStatus);
-							System.out.println("Kid friendly status " + kidFriendlyStatus +", " + bookmarks);
+							System.out.println("Kid friendly status " + kidFriendlyStatus + ", " + bookmarks);
 						}
 					}
 				}
+				//System.out.println("Kid friendly status error "  + bookmarks);
 			}
 		}
 	}
@@ -51,7 +49,7 @@ public class View {
 		return Math.random() < 0.5 ? true : false;
 
 	}
-
+ 
 	// public static void bookmark (User user, Bookmark[][] bookmark) {
 	// System.out.println("\n + " + user.getEmail() + "isBookmarking" );
 	// for(int i = 0 ; i< DataStore.USER_BOOKMARK_LIMIT; i++) {
